@@ -39,7 +39,14 @@ function App() {
     <div className="main">
       <section className="user">
         {userData.map((each, index) => {
-          return <UserCard userData={each} userImg={userImg} index={index} />;
+          return (
+            <UserCard
+              key={index}
+              userData={each}
+              userImg={userImg}
+              index={index}
+            />
+          );
         })}
       </section>
     </div>
